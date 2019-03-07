@@ -30,12 +30,12 @@ class VendingMachine {
             System.exit(0); // 強制終了させる
         }
 
-        int number = args.length - 1; // 投入された硬貨の枚数。最後尾は買いたい飲み物なので数にいれない。
-        int amount = 0;                // 自動販売機で使えるお金の合計を保持する
+        int coinCount = args.length - 1; // 投入された硬貨の枚数。最後尾は買いたい飲み物なので数にいれない。
+        int amount = 0; // 自動販売機で使えるお金の合計を保持する
 
         // 1、投入された硬貨の不正チェック
         // 2、投入金額の計算
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < coinCount; i++) {
 
             // 1枚ずつ硬貨を取り出す
             int coin = Integer.parseInt(args[i]);
